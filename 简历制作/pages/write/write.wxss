@@ -1,1 +1,26 @@
 /* pages/write/write.wxss */
+.user-data{
+  padding-top: 5px;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;  
+  background-color: pink;
+}
+.one{
+  width: 90%;
+  height: 40px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;  
+}
+input{
+  width: 60%;
+  float:right;
+  margin-left: 5px;
+  border-color: white;
+  border-radius: 5px;
+  border: 2px teal solid;
+  padding-left: 2px;
+}
