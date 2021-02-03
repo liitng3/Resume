@@ -1,0 +1,11 @@
+<view>
+  <view class="edit-list">
+  　　<text class="list-name list-first">头像</text>
+  　　<view class="edit-righr-bar">
+  <!-- 　　　　<image class="head-portrait" src="{{avatar}}" bindtap='changeAvatar'></image> -->
+  　　</view>
+  </view>
+  <view class="user-data">
+
+  </view>
+</view>
