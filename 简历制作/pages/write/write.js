@@ -5,69 +5,80 @@ Page({
    * 页面的初始数据
    */
   data: {
-    name:"",
-    age:18,
-    email:"",
-    face:'',
-    marry:"",
-    nation:'',
-    sex:"",
-    tel:""
+    name: "",
+    age: 18,
+    email: "",
+    face: '',
+    marry: "",
+    nation: '',
+    sex: "",
+    tel: "",
+    items: [{
+        value: '男',
+        name: '男'
+      },
+      {
+        value: '女',
+        name: '女'
+      }
+    ],
+    casArray: ['请选择','已婚', '未婚'],
+    casIndex: 0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
 
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   },
   getInput1(e) {
@@ -81,6 +92,7 @@ Page({
     })
   },
   getInput3(e) {
+    console.log(e.detail.value)
     this.setData({
       sex: e.detail.value
     })
@@ -95,11 +107,6 @@ Page({
       nation: e.detail.value
     })
   },
-  getInput6(e) {
-    this.setData({
-      marry: e.detail.value
-    })
-  },
   getInput7(e) {
     this.setData({
       tel: e.detail.value
@@ -112,7 +119,7 @@ Page({
   },
 
   postForm(f) {
-    var that=this;
+    var that = this;
     //邮箱验证
     if (!(/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/.test(this.data.email))) {
       wx.showToast({
@@ -130,7 +137,7 @@ Page({
       });
       return false
     }
-    
+
     wx.cloud.callFunction({
       name: 'addDate',
       data: {
@@ -148,9 +155,15 @@ Page({
     }).catch(res => {
       console.log("失败", res)
     })
+  },
 
-   
-  }
-
-
+  bindCasPickerChange(e) {
+    this.setData({
+      casIndex: e.detail.value
+    })
+    this.setData({
+      marry: this.data.casArray[e.detail.value]
+    })
+    console.log('乔丹选的是', this.data.marry)
+  },
 })

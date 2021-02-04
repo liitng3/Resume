@@ -1,2 +1,14 @@
-<!--pages/we/we.wxml-->
-<text>pages/we/we.wxml</text>
+<view class="head">
+  <!-- <image class="bjtp" src="/images/my/bjhead.jpg"></image> -->
+  <view wx:if='{{logged==true}}'>
+    <view class="touxiang">
+      <!-- <image class="touxiangimg" src="{{userInfo.avatarUrl}}"></image> -->
+    </view>
+    <view class="nickname">
+      <text>{{userInfo.nickName}}</text>
+    </view>
+  </view>
+  <view class="touxiang" wx:if="{{logged==false}}">
+    <van-button round type='danger' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">点此登录</van-button>
+  </view>
+</view>

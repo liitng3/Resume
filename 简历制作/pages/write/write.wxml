@@ -1,44 +1,62 @@
 <view>
   <view class="edit-list">
-  　　<text class="list-name list-first">头像</text>
-  　　<view class="edit-righr-bar">
-  <!-- 　　　　<image class="head-portrait" src="{{avatar}}" bindtap='changeAvatar'></image> -->
-  　　</view>
+
+    <text class="list-name list-first">头像</text>
+    <view class="edit-righr-bar">
+      <!-- 　　　　<image class="head-portrait" src="{{avatar}}" bindtap='changeAvatar'></image> -->
+    </view>
   </view>
 
   <view>
     <form bindsubmit="postForm">
       <view class="user-data">
-        <view class="one">      
-          姓　　名<input type="text" bindinput="getInput1" name="input"></input>
+        <view class="one">
+          姓　　名
+          <input type="text" bindinput="getInput1" name="input"></input>
         </view>
-        <view class="one">      
-          年　　龄<input type="text" bindinput="getInput2" name="input"></input>
+        <view class="one">
+          年　　龄
+          <input type="text" bindinput="getInput2" name="input"></input>
         </view>
-        <view class="one">      
+        <!-- <view class="one">      
           性　　别<input type="text" bindinput="getInput3" name="input"></input>
+        </view> -->
+        <view class="one">
+          <radio-group class="radio-group" bindchange="getInput3">
+            性　　别
+            <label class="radio" wx:for="{{items}}" wx:key="{{item.value}}">
+              <radio color="red" value="{{item.value}}" checked="true" />{{item.name}}
+            </label>
+          </radio-group>
         </view>
-        <view class="one">      
-          邮　　箱<input type="text" bindinput="getInput4" name="input"></input>
+        <view class="one">
+          邮　　箱
+          <input type="text" bindinput="getInput4" name="input"></input>
         </view>
-        <view class="one">      
-          民　　族<input type="text" bindinput="getInput5" name="input"></input>
+        <view class="one">
+          民　　族
+          <input type="text" bindinput="getInput5" name="input"></input>
         </view>
-        <view class="one">      
-          婚姻状况<input type="text" bindinput="getInput6" name="input"></input>
+        <view class="one">
+          婚姻状况
+          <picker class="picker-marry" bindchange="bindCasPickerChange" value="{{casIndex}}" range="{{casArray}}">
+            <view>
+              <text>{{casArray[casIndex]}}</text>
+            </view>
+          </picker>
         </view>
-        <view class="one">      
-          手机号码<input type="text" bindinput="getInput7" name="input"></input>
+        <view class="one">
+          手机号码
+          <input type="text" bindinput="getInput7" name="input"></input>
         </view>
-        <view class="one">      
-          政治面貌<input type="text" bindinput="getInput8" name="input"></input>
+        <view class="one">
+          政治面貌
+          <input type="text" bindinput="getInput8" name="input"></input>
         </view>
       </view>
-
 
       <button form-type="submit">提交
       </button>
     </form>
- 
   </view>
 </view>

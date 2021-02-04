@@ -24,3 +24,15 @@ input{
   border: 2px teal solid;
   padding-left: 2px;
 }
+.radio{
+  margin-left: 20px;
+}
+.picker-marry{
+  width: 60%;
+  float:right;
+  margin-left: 5px;
+  /* border-color: white;
+  border-radius: 5px;
+  border: 2px teal solid; */
+  padding-left: 2px;
+}
