@@ -149,6 +149,7 @@ Page({
         nation: that.data.nation,
         sex: that.data.sex,
         tel: that.data.tel
+        
       }
     }).then(res => {
       console.log("成功", res)

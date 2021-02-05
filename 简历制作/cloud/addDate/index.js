@@ -17,7 +17,9 @@ exports.main = async (event, context) => {
       marry: event.marry,
       nation: event.nation,
       sex: event.sex,
-      tel: event.tel
+      tel: event.tel,
+      // id: md5(wxContext.OPENID),
+      // openid: wxContext.OPENID,
     }
   })
   

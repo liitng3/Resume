@@ -1,8 +1,8 @@
-<view class="head">
-  <!-- <image class="bjtp" src="/images/my/bjhead.jpg"></image> -->
+<!-- <view class="head">
+  <image class="bjtp" src="/images/my/bjhead.jpg"></image>
   <view wx:if='{{logged==true}}'>
     <view class="touxiang">
-      <!-- <image class="touxiangimg" src="{{userInfo.avatarUrl}}"></image> -->
+      <image class="touxiangimg" src="{{userInfo.avatarUrl}}"></image>
     </view>
     <view class="nickname">
       <text>{{userInfo.nickName}}</text>
@@ -11,4 +11,15 @@
   <view class="touxiang" wx:if="{{logged==false}}">
     <van-button round type='danger' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">点此登录</van-button>
   </view>
-</view>
+</view> -->
+
+<view class='container'>
+	  <open-data class="avs" type="userAvatarUrl"></open-data>
+	  <view class='username'>
+	    <text>Hello </text>
+	    <open-data type="userNickName"></open-data>
+	  </view>
+	  <button hidden='{{hiddenButton}}' class='moto-container' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">
+	    <text class='moto'> 开启小程序之旅</text>
+	  </button>
+</view>  
