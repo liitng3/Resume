@@ -36,3 +36,18 @@ input{
   border: 2px teal solid; */
   padding-left: 2px;
 }
+.user-school{
+  padding-top: 5px;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;  
+  background-color: red;
+}
+.user-school .btn{
+  display: inline-block;
+  width: auto;
+  height: 5px;
+  /* float: right; */
+}

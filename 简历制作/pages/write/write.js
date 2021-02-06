@@ -23,16 +23,39 @@ Page({
       }
     ],
     casArray: ['请选择','已婚', '未婚'],
-    casIndex: 0
+    casIndex: 0,
+    imgUrl:""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    var that = this;
+    wx.cloud.callFunction({
+      name: 'getData',
+      success: res => {
+        that.setData({
+          imgUrl:res.result.data[0].imgUrl,
+          name: res.result.data[0].name,
+          age: res.result.data[0].age,
+          email: res.result.data[0].email,
+          face: res.result.data[0].face,
+          marry: res.result.data[0].marry,
+          nation: res.result.data[0].nation,
+          sex: res.result.data[0].sex,
+          tel: res.result.data[0].tel,
+        })
+      },
+      fail: err => {
+      }
+    })
   },
-
+  jump1(){
+    wx.navigateTo({
+      url: '/pages/school/school',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -81,6 +104,39 @@ Page({
   onShareAppMessage: function() {
 
   },
+  chooseImg() {
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original','compressed'],
+      sourceType:['album','camera'],
+      success:res=> {
+        this.uploadImg(res.tempFilePaths[0])
+      }
+    })
+  },
+  uploadImg(temFile) {
+    // 图片路径
+    wx.cloud.callFunction({
+      name: 'openid',
+      success: res => {
+        console.log(res)
+        wx.cloud.uploadFile({
+          filePath: temFile,
+          // cloudPath: res.result.data[0].openid+'.jpg',
+          cloudPath:new Date().getTime()+'.png',
+          success:res=> {
+            this.setData({
+              imgUrl:res.fileID
+            })
+            console.log(this.data.imgURL)
+            console.log("上传成功")
+          }
+        })
+      },
+      fail: err => {
+      }
+    })
+  },
   getInput1(e) {
     this.setData({
       name: e.detail.value
@@ -105,6 +161,11 @@ Page({
   getInput5(e) {
     this.setData({
       nation: e.detail.value
+    })
+  },
+  getInput6(e) {
+    this.setData({
+      marry: e.detail.value
     })
   },
   getInput7(e) {
@@ -148,23 +209,13 @@ Page({
         marry: that.data.marry,
         nation: that.data.nation,
         sex: that.data.sex,
-        tel: that.data.tel
-        
+        tel: that.data.tel,
+        imgUrl:that.data.imgUrl
       }
     }).then(res => {
       console.log("成功", res)
     }).catch(res => {
       console.log("失败", res)
     })
-  },
-
-  bindCasPickerChange(e) {
-    this.setData({
-      casIndex: e.detail.value
-    })
-    this.setData({
-      marry: this.data.casArray[e.detail.value]
-    })
-    console.log('乔丹选的是', this.data.marry)
   },
 })

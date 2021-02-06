@@ -1,13 +1,19 @@
 <!-- index.wxml -->
 <view class="content">
   <view class="container subject1">
-    <navigator url="/pages/write/write" open-type="navigate">
+    <view bindtap="tapClick">
       <text>填写信息</text>
-    </navigator>
+    </view>
+    <!-- <navigator url="/pages/write/write" open-type="navigate">
+      <text>填写信息</text>
+    </navigator> -->
   </view>
   <view class="container subject2">
-    <navigator url="/pages/modle/modle" open-type="navigate">
+    <view bindtap="tapClick1">
       <text>选择模板</text>
-    </navigator>
+    </view>
+    <!-- <navigator url="/pages/modle/modle" open-type="navigate">
+      <text>选择模板</text>
+    </navigator> -->
   </view>
 </view>

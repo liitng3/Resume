@@ -14,10 +14,10 @@
 </view> -->
 
 <view class='container'>
-	  <open-data class="avs" type="userAvatarUrl"></open-data>
+	  <open-data class="avs" hidden='{{!hiddenButton}}' type="userAvatarUrl"></open-data>
 	  <view class='username'>
-	    <text>Hello </text>
-	    <open-data type="userNickName"></open-data>
+	    <!-- <text>Hello </text> -->
+	    <open-data type="userNickName" hidden='{{!hiddenButton}}'></open-data>
 	  </view>
 	  <button hidden='{{hiddenButton}}' class='moto-container' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">
 	    <text class='moto'> 开启小程序之旅</text>

@@ -178,7 +178,7 @@ Page({
         success: res => {
           if (res.errMsg == "cloud.callFunction:ok")
             console.log(res);
-            if (res.result) {
+            if (res.result.data.length!=0) {
               //如果成功获取到
               //将获取到的用户资料写入app.js全局变量
               console.log(res)
@@ -230,6 +230,7 @@ Page({
         // userData: e
       },
       success: res => {
+        console.log(res)
         if (res.errMsg == "cloud.callFunction:ok" && res.result) {
           _this.setData({
             hiddenButton: true
@@ -238,7 +239,7 @@ Page({
           app.globalData.userId = res.result._id
           _this.data.registered = true
           console.log(res)
-          wx.navigateTo({
+          wx.switchTab({
             url: '/pages/home/home'
           })
         } else {

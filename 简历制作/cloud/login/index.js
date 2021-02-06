@@ -1,26 +1,5 @@
-// // 云函数入口文件
-// const cloud = require('wx-server-sdk')
-
-// // cloud.init()
-// cloud.init({
-//   env: "resume-dbcdg"
-// })
-
-// // 云函数入口函数
-// exports.main = async (event, context) => {
-//   const wxContext = cloud.getWXContext()
-
-//   return {
-//     event,
-//     openid: wxContext.OPENID,
-//     appid: wxContext.APPID,
-//     unionid: wxContext.UNIONID,
-//   }
-// }
-
 const cloud = require('wx-server-sdk')
 const md5 = require('md5-node')
-// cloud.init()
 cloud.init({
   env: "resume-dbcdg"
 })
@@ -30,25 +9,26 @@ const _ = db.command
 
 // 云函数入口函数
 exports.main = async (event, context) => {
-  console.log(event)
   const wxContext = cloud.getWXContext()
   //更新当前信息
-  if (event.update == true) {
-    try {
-      return await usersTable.doc(md5(wxContext.OPENID)).update({
-        data: {
-          userData: _.set(event.userData)
-        },
-      })
-    } catch (e) {
-      console.error(e)
-    }
-  } else if (event.getSelf == true) {
+  // if (event.update == true) {
+  //   try {
+  //     return await usersTable.doc(md5(wxContext.OPENID)).update({
+  //       data: {
+  //         userData: _.set(event.userData)
+  //       },
+  //     })
+  //   } catch (e) {
+  //     console.error(e)
+  //   }
+  // } else
+  if (event.getSelf == true) {
     //获取当前用户信息
     try {
       return cloud.database().collection("user").where({
-        openid: wxContext.OPENID
+        openid:wxContext.OPENID
       }).get()
+      // doc(wxContext.OPENID).get()
       // return await usersTable.doc(md5(wxContext.OPENID)).field({
       //   openid: false
       // }).get()
@@ -71,6 +51,7 @@ exports.main = async (event, context) => {
           nation: "",
           sex: "",
           tel: "",
+          imgUrl:"cloud://resume-dbcdg.7265-resume-dbcdg-1304912994/默认.jpg"
           // userData: event.userData
           // boughtList: [],
           // messageList: [],
@@ -80,14 +61,15 @@ exports.main = async (event, context) => {
     } catch (e) {
       console.log(e)
     }
-  } else if (event.getOthers == true) {
-    //获取指定用户信息
-    try {
-      return await usersTable.doc(event.userId).field({
-        userData: true
-      }).get()
-    } catch (e) {
-      console.error(e)
-    }
   }
+  //  else if (event.getOthers == true) {
+  //   //获取指定用户信息
+  //   try {
+  //     return await usersTable.doc(event.userId).field({
+  //       userData: true
+  //     }).get()
+  //   } catch (e) {
+  //     console.error(e)
+  //   }
+  // }
 }

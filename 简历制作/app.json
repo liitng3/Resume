@@ -1,11 +1,12 @@
 {
-  "pages": [
+  "pages": [    
     "pages/home/home",
     "pages/index/index",
     "pages/cloud/cloud",
     "pages/we/we",
     "pages/write/write",
-    "pages/modle/modle"
+    "pages/modle/modle",
+    "pages/school/school"
   ],
   "window": {
     "backgroundTextStyle": "light",

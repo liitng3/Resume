@@ -8,7 +8,10 @@ cloud.init({
 
 // 云函数入口函数
 exports.main = async (event, context) => {
-  return cloud.database().collection("user").add({
+  const wxContext = cloud.getWXContext()
+  return cloud.database().collection("user").where({
+    openid:wxContext.OPENID
+  }).update({
     data: {
       name: event.name,
       age: event.age,
@@ -18,8 +21,7 @@ exports.main = async (event, context) => {
       nation: event.nation,
       sex: event.sex,
       tel: event.tel,
-      // id: md5(wxContext.OPENID),
-      // openid: wxContext.OPENID,
+      imgUrl:event.imgUrl
     }
   })
   

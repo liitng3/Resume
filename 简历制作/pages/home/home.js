@@ -7,7 +7,58 @@ Page({
   data: {
 
   },
-
+  tapClick:function() {
+    wx.cloud.callFunction({
+      name: 'openid',
+      success: res => {
+        if (res.result.data.length!=0) {
+          //如果成功获取到
+          //将获取到的用户资料写入app.js全局变量
+          console.log(res)
+          wx.navigateTo({
+            url: '/pages/write/write',
+          })
+        } else {
+          //未成功获取到用户信息
+          //调用注册方法
+          wx.switchTab({
+            url: '/pages/we/we'
+          })
+        }
+      },
+      fail: err => {
+      }
+    })
+  },
+  tapClick1:function() {
+    wx.cloud.callFunction({
+      name: 'openid',
+      success: res => {
+        if (res.result.data.length!=0) {
+          //如果成功获取到
+          //将获取到的用户资料写入app.js全局变量
+          console.log(res)
+          if(res.result.data[0].tel) {
+            wx.navigateTo({
+              url: '/pages/modle/modle',
+            })
+          } else {
+            wx.navigateTo({
+              url: '/pages/write/write',
+            })
+          }
+        } else {
+          //未成功获取到用户信息
+          //调用注册方法
+          wx.switchTab({
+            url: '/pages/we/we'
+          })
+        }
+      },
+      fail: err => {
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

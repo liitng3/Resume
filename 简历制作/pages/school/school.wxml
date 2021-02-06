@@ -1,0 +1,10 @@
+<view>
+  <input type="text" bindinput="getInput" value="{{inputCon}}"></input>
+  <button bindtap="add">+</button>
+  <view>
+    {{con}}
+  </view>
+  <view>
+    提示
+  </view>
+</view>
