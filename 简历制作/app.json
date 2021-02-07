@@ -6,7 +6,10 @@
     "pages/we/we",
     "pages/write/write",
     "pages/modle/modle",
-    "pages/school/school"
+    "pages/school/school",
+    "pages/work/work",
+    "pages/skill/skill",
+    "pages/prize/prize"
   ],
   "window": {
     "backgroundTextStyle": "light",

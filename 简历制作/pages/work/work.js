@@ -20,9 +20,9 @@ Page({
       con:context
     })
     wx.cloud.callFunction({
-      name:"updateSchool",
+      name:"updateWork",
       data: {
-        school: that.data.con,
+        work: that.data.con,
       }
     }).then(res => {
       console.log("成功", res)
@@ -60,7 +60,7 @@ Page({
     wx.cloud.callFunction({
       name: 'getData',
       success: res => {
-        box=res.result.data[0].school.split(";")
+        box=res.result.data[0].work.split(";")
         var len=box.length;
         for(var i=len-1;i>0;i--){
           if(box[i]=="" || box[i]=="undefined"){

@@ -1,5 +1,4 @@
 {
-  "cloudfunctionRoot": "cloud/",
   "description": "项目配置文件",
   "packOptions": {
     "ignore": []
@@ -11,7 +10,7 @@
     "postcss": true,
     "preloadBackgroundData": false,
     "minified": true,
-    "newFeature": true,
+    "newFeature": false,
     "coverView": true,
     "nodeModules": false,
     "autoAudits": false,
@@ -43,13 +42,16 @@
   "compileType": "miniprogram",
   "libVersion": "2.15.0",
   "appid": "wx4f10e4f97d8eedbf",
-  "projectname": "resume",
+  "projectname": "miniprogram-1",
   "debugOptions": {
     "hidedInDevtools": []
   },
+  "scripts": {},
+  "staticServerOptions": {
+    "baseURL": "",
+    "servePath": ""
+  },
   "isGameTourist": false,
-  "simulatorType": "wechat",
-  "simulatorPluginLibVersion": {},
   "condition": {
     "search": {
       "list": []
@@ -57,22 +59,17 @@
     "conversation": {
       "list": []
     },
+    "game": {
+      "list": []
+    },
     "plugin": {
       "list": []
     },
-    "game": {
-      "currentL": -1,
+    "gamePlugin": {
       "list": []
     },
     "miniprogram": {
-      "list": [
-        {
-          "id": -1,
-          "name": "pages/write/write",
-          "pathName": "pages/write/write",
-          "scene": null
-        }
-      ]
+      "list": []
     }
   }
 }

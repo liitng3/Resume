@@ -1,0 +1,29 @@
+{
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "pages/write/write",
+          "pathName": "pages/write/write",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/write/write",
+          "pathName": "pages/school/school",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

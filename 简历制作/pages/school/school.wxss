@@ -1,1 +1,43 @@
 /* pages/school/school.wxss */
+.box{
+  width: 100%;
+}
+.top{
+  width: 90%;
+  height: auto;
+  background:pink ;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center; 
+}
+.write{
+  width: 80%;
+  display: inline-block;
+  border:2px white solid;
+
+}
+.btn{
+
+  text-align: center;
+  width: 10%;
+  display: inline-block;
+  border:2px white solid;
+  margin-right:0px ;
+
+
+}
+.cen{
+  width: 90%;
+  height: 100px;
+  border:1px black solid;
+  margin:0 auto;
+  margin-top: 30px;
+  word-break: break-all;
+}
+.bottom{
+  width: 80%;
+  text-align: center;
+  margin:0 auto;
+  margin-top: 30px;
+}

@@ -56,6 +56,13 @@
       <view class="user-school" bindtap="jump1">
         在校经历 
       </view>
+      <view class="user-school" bindtap="jump2">
+        工作经历 
+      </view><view class="user-school" bindtap="jump3">
+        职业技能
+      </view><view class="user-school" bindtap="jump4">
+        奖项证书 
+      </view>
       <button form-type="submit">提交
       </button>
     </form>

@@ -56,6 +56,21 @@ Page({
       url: '/pages/school/school',
     })
   },
+  jump2(){
+    wx.navigateTo({
+      url: '/pages/work/work',
+    })
+  },
+  jump3(){
+    wx.navigateTo({
+      url: '/pages/skill/skill',
+    })
+  },
+  jump4(){
+    wx.navigateTo({
+      url: '/pages/prize/prize',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
