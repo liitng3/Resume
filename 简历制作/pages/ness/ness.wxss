@@ -1,0 +1,5 @@
+/* pages/ness/ness.wxss */
+/* pages/me/me.wxss */
+view{
+  margin: 0 8px;
+}

@@ -24,7 +24,10 @@ Page({
     ],
     casArray: ['请选择','已婚', '未婚'],
     casIndex: 0,
-    imgUrl:""
+    imgUrl:"",
+    assess:'',
+    hobby:'',
+    intend:''
   },
 
   /**
@@ -45,6 +48,9 @@ Page({
           nation: res.result.data[0].nation,
           sex: res.result.data[0].sex,
           tel: res.result.data[0].tel,
+          assess: res.result.data[0].assess,
+          hobby: res.result.data[0].hobby,
+          intend: res.result.data[0].intend
         })
       },
       fail: err => {
@@ -193,6 +199,21 @@ Page({
       face: e.detail.value
     })
   },
+  getInput9(e) {
+    this.setData({
+      intend: e.detail.value
+    })
+  },
+  getInput10(e) {
+    this.setData({
+      hobby: e.detail.value
+    })
+  },
+  getInput11(e) {
+    this.setData({
+      assess: e.detail.value
+    })
+  },
 
   postForm(f) {
     var that = this;
@@ -225,7 +246,10 @@ Page({
         nation: that.data.nation,
         sex: that.data.sex,
         tel: that.data.tel,
-        imgUrl:that.data.imgUrl
+        imgUrl:that.data.imgUrl,
+        assess: that.data.assess,
+        hobby: that.data.hobby,
+        intend: that.data.intend
       }
     }).then(res => {
       console.log("成功", res)

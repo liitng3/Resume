@@ -1,25 +1,15 @@
-<!-- <view class="head">
-  <image class="bjtp" src="/images/my/bjhead.jpg"></image>
-  <view wx:if='{{logged==true}}'>
-    <view class="touxiang">
-      <image class="touxiangimg" src="{{userInfo.avatarUrl}}"></image>
-    </view>
-    <view class="nickname">
-      <text>{{userInfo.nickName}}</text>
-    </view>
-  </view>
-  <view class="touxiang" wx:if="{{logged==false}}">
-    <van-button round type='danger' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">点此登录</van-button>
-  </view>
-</view> -->
-
 <view class='container'>
 	  <open-data class="avs" hidden='{{!hiddenButton}}' type="userAvatarUrl"></open-data>
 	  <view class='username'>
-	    <!-- <text>Hello </text> -->
 	    <open-data type="userNickName" hidden='{{!hiddenButton}}'></open-data>
+    </view>
+    <view class='me' hidden='{{!hiddenButton}}' bindtap="jump1">
+	    <text>我的简历</text>
+    </view>
+    <view class='question' hidden='{{!hiddenButton}}' bindtap="jump2">
+	    <text>常见问题</text>
 	  </view>
 	  <button hidden='{{hiddenButton}}' class='moto-container' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">
-	    <text class='moto'> 开启小程序之旅</text>
+	    <text class='moto'> 登录</text>
 	  </button>
 </view>  

@@ -21,7 +21,10 @@ exports.main = async (event, context) => {
       nation: event.nation,
       sex: event.sex,
       tel: event.tel,
-      imgUrl:event.imgUrl
+      imgUrl:event.imgUrl,
+      assess: event.assess,
+      hobby: event.hobby,
+      intend: event.intend
     }
   })
   

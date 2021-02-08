@@ -1,4 +1,4 @@
-// pages/modle/modle.js
+// pages/question/question.js
 Page({
 
   /**
@@ -9,32 +9,22 @@ Page({
   },
   jump1(){
     wx.navigateTo({
-      url: '/pages/modle1/modle1',
+      url: '/pages/assess/assess',
     })
   },
   jump2(){
     wx.navigateTo({
-      url: '/pages/modle2/modle2',
+      url: '/pages/exprience/exprience',
     })
   },
   jump3(){
     wx.navigateTo({
-      url: '/pages/modle3/modle3',
+      url: '/pages/normal/normal',
     })
   },
   jump4(){
     wx.navigateTo({
-      url: '/pages/modle4/modle4',
-    })
-  },
-  jump5(){
-    wx.navigateTo({
-      url: '/pages/modle5/modle5',
-    })
-  },
-  jump6(){
-    wx.navigateTo({
-      url: '/pages/modle6/modle6',
+      url: '/pages/ness/ness',
     })
   },
   /**

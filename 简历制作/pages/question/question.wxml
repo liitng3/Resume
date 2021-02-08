@@ -1,0 +1,5 @@
+
+<view bindtap="jump1">自我评价大全</view>
+<view bindtap="jump2">工作经验的推荐写法?</view>
+<view bindtap="jump3">求职意向要注意哪些规范?</view>
+<view bindtap="jump4">简历必填的基本信息</view>

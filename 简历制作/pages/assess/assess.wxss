@@ -1,0 +1,4 @@
+/* pages/assess/assess.wxss */
+view{
+  margin: 0 8px;
+}

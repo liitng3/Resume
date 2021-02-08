@@ -51,3 +51,6 @@ input{
   height: 5px;
   /* float: right; */
 }
+textarea{
+  width: 100%;
+}

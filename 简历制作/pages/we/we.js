@@ -216,7 +216,16 @@ Page({
     } else
       console.log("未授权")
   },
-
+  jump1(){
+    wx.navigateTo({
+      url: '/pages/me/me',
+    })
+  },
+  jump2(){
+    wx.navigateTo({
+      url: '/pages/question/question',
+    })
+  },
   /**
    * 注册用户信息
    */

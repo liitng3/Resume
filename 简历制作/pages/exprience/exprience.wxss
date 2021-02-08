@@ -1,0 +1,4 @@
+/* pages/exprience/exprience.wxss */
+view{
+  margin: 0 8px;
+}

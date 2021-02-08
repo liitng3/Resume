@@ -1,0 +1,5 @@
+/* pages/question/question.wxss */
+view{
+  margin: 10px;
+  margin-bottom: 15px;
+}

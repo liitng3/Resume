@@ -1,0 +1,4 @@
+/* pages/normal/normal.wxss */
+view{
+  margin: 0 8px;
+}

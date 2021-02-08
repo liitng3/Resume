@@ -1,4 +1,4 @@
-// pages/modle/modle.js
+// pages/normal/normal.js
 Page({
 
   /**
@@ -7,36 +7,7 @@ Page({
   data: {
 
   },
-  jump1(){
-    wx.navigateTo({
-      url: '/pages/modle1/modle1',
-    })
-  },
-  jump2(){
-    wx.navigateTo({
-      url: '/pages/modle2/modle2',
-    })
-  },
-  jump3(){
-    wx.navigateTo({
-      url: '/pages/modle3/modle3',
-    })
-  },
-  jump4(){
-    wx.navigateTo({
-      url: '/pages/modle4/modle4',
-    })
-  },
-  jump5(){
-    wx.navigateTo({
-      url: '/pages/modle5/modle5',
-    })
-  },
-  jump6(){
-    wx.navigateTo({
-      url: '/pages/modle6/modle6',
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */

@@ -1,2 +1,20 @@
-<!--pages/modle/modle.wxml-->
-<text>pages/modle/modle.wxml</text>
+<view class="container">
+  <view bindtap="jump1">
+    1
+  </view>
+  <view bindtap="jump2">
+    2
+  </view>
+  <view bindtap="jump3">
+    3
+  </view>
+  <view bindtap="jump4">
+    4
+  </view>
+  <view bindtap="jump5">
+    5
+  </view>
+  <view bindtap="jump6">
+    6
+  </view>
+</view>
