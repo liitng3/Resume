@@ -1,1 +1,8 @@
 /* pages/modle1/modle1.wxss */
+.can{
+  width: 90%;
+  height: 400px;
+  margin: 20px auto;
+  border: 1px gray solid;
+}
+  

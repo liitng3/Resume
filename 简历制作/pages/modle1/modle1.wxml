@@ -1,2 +1,3 @@
-<!--pages/modle1/modle1.wxml-->
-<text>pages/modle1/modle1.wxml</text>
+
+<canvas canvas-id="myCanvas"  class="can"/>
+<button type="primary" bindtap="save">保存简历为图片</button>

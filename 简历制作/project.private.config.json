@@ -28,6 +28,12 @@
         {
           "name": "pages/we/we",
           "pathName": "pages/we/we",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/modle1/modle1",
+          "pathName": "pages/modle1/modle1",
           "scene": null
         }
       ]
