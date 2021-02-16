@@ -9,9 +9,9 @@ Page({
     age: 18,
     email: "",
     face: '',
-    marry: "",
+    marry: "未婚",
     nation: '',
-    sex: "",
+    sex: "女",
     tel: "",
     items: [{
         value: '男',
