@@ -17,7 +17,11 @@ Page({
     assess:'',
     hobby:'',
     intend:'',
-    bgImgPath:''
+    bgImgPath:'',
+    prize:[],
+    school:[],
+    skill:[],
+    work:[]
   },
   
   save(){
@@ -57,7 +61,11 @@ Page({
           tel: res.result.data[0].tel,
           assess: res.result.data[0].assess,
           hobby: res.result.data[0].hobby,
-          intend: res.result.data[0].intend
+          intend: res.result.data[0].intend,
+          prize:res.result.data[0].prize.split(';'),
+          school:res.result.data[0].school.split(';'),
+          skill:res.result.data[0].skill.split(';'),
+          work:res.result.data[0].work.split(';')
         })
         const ctx = wx.createCanvasContext('myCanvas');
         ctx.setFillStyle('#b8b4cb')
@@ -67,7 +75,7 @@ Page({
         ctx.lineTo(100, 122.5)
         ctx.setStrokeStyle('#748ca6')
         // ctx.setLineCap('round')
-        ctx.setLineWidth(3)
+        ctx.setLineWidth(1)
         ctx.setFillStyle('#748ca6')
         // ctx.globalAlpha=0.4;
         ctx.closePath()
@@ -139,27 +147,84 @@ Page({
         // ctx.arc(200,200, 50, 0, Math.PI * 2,true);
         // ctx.closePath()
         // ctx.stroke()
-   
-
+        var num = 0;
+        var num1=0;
+        var num2=0;
+        var num3=0;
+        var num4=0;
+        for(var i=0;i<that.data.school.length;i++) {
+          if(that.data.school[i] != 'undefined' && that.data.school[i] != '') {
+            num++;
+            num1++;
+          }          
+        } 
+        for(var i=0;i<that.data.prize.length;i++) {
+          if(that.data.prize[i] != 'undefined' && that.data.prize[i] != '') {
+            num++;
+            num2++;
+          }          
+        } 
+        for(var i=0;i<that.data.work.length;i++) {
+          if(that.data.work[i] != 'undefined' && that.data.work[i] != '') {
+            num++;
+            num3++;
+          }          
+        } 
+        for(var i=0;i<that.data.skill.length;i++) {
+          if(that.data.skill[i] != 'undefined' && that.data.skill[i] != '') {
+            num++;
+            num4++;
+          }          
+        } 
+        num = num + 4;
+// 一个num代表25
         const grd = ctx.createCircularGradient(120, 20, 10)
         grd.addColorStop(0, '#748ca6')
         grd.addColorStop(1, 'white')
         ctx.setFillStyle(grd)
-        ctx.fillRect(100, 0, 200, 100)
+
+        ctx.fillRect(100, 0, 200, 25*num1)
+        ctx.setFillStyle('black')
+        ctx.setFontSize(12)
+        ctx.fillText('在校经历',130,23)
+        ctx.setFontSize(8)
+        var len = that.data.school.length;
+        var arr1=[]
+        for(var i=0;i<len;i++) {
+          if(that.data.school[i] != 'undefined' && that.data.school[i] != '') {
+            arr1.push(that.data.school[i])            
+          }          
+        }  
+        for(var i=0;i<arr1.length;i++) {
+          ctx.fillText(arr1[i],130,37+i*11)
+        }              
         ctx.stroke()
        
-        const grd1 = ctx.createCircularGradient(120, 120, 10)
+        const grd1 = ctx.createCircularGradient(120, 25*num1+10, 10)
         grd1.addColorStop(0, '#748ca6')
         grd1.addColorStop(1, 'white')
         ctx.setFillStyle(grd1)
-        ctx.fillRect(100, 100, 200, 40)
+        ctx.fillRect(100, 25*num1, 200, 25*num2)
+        ctx.setFillStyle('black')
+        ctx.setFontSize(12)
+        ctx.fillText('奖项证书',130,25*num1+13)
+        ctx.setFontSize(8)
+        var arr2=[];
+        for(var i=0;i<that.data.prize.length;i++) {
+          if(that.data.prize[i] != 'undefined' && that.data.prize[i] != '') {
+            arr2.push(that.data.prize[i])            
+          }          
+        }  
+        for(var i=0;i<arr2.length;i++) {
+          ctx.fillText(arr2[i],130,25*num1+25+i*11)
+        }   
         ctx.stroke()
 
-        const grd2 = ctx.createCircularGradient(120, 160, 10)
+        const grd2 = ctx.createCircularGradient(120, 25*(num1+num2)+20, 10)
         grd2.addColorStop(0, '#748ca6')
         grd2.addColorStop(1, 'white')
         ctx.setFillStyle(grd2)
-        ctx.fillRect(100, 140, 200, 40)
+        ctx.fillRect(100, 25*(num1+num2), 200, 25*num3)
         ctx.stroke()
 
         const grd3 = ctx.createCircularGradient(120, 200, 10)
