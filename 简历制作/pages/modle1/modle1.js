@@ -225,27 +225,64 @@ Page({
         grd2.addColorStop(1, 'white')
         ctx.setFillStyle(grd2)
         ctx.fillRect(100, 25*(num1+num2), 200, 25*num3)
+        ctx.setFillStyle('black')
+        ctx.setFontSize(12)
+        ctx.fillText('工作经历',130,25*(num1+num2)+23)
+        ctx.setFontSize(8)
+        var arr3=[];
+        for(var i=0;i<that.data.work.length;i++) {
+          if(that.data.work[i] != 'undefined' && that.data.work[i] != '') {
+            arr3.push(that.data.work[i])            
+          }          
+        }  
+        for(var i=0;i<arr3.length;i++) {
+          ctx.fillText(arr3[i],130,25*(num1+num2)+35+i*11)
+        }   
         ctx.stroke()
 
-        const grd3 = ctx.createCircularGradient(120, 200, 10)
+        const grd3 = ctx.createCircularGradient(120, 25*(num1+num2+num3)+20, 10)
         grd3.addColorStop(0, '#748ca6')
         grd3.addColorStop(1, 'white')
         ctx.setFillStyle(grd3)
-        ctx.fillRect(100, 180, 200, 40)
+        ctx.fillRect(100, 25*(num1+num2+num3), 200, 25*num3)
+        ctx.setFillStyle('black')
+        ctx.setFontSize(12)
+        ctx.fillText('职业技能',130,25*(num1+num2+num3)+23)
+        ctx.setFontSize(8)
+        var arr4=[];
+        for(var i=0;i<that.data.skill.length;i++) {
+          if(that.data.skill[i] != 'undefined' && that.data.skill[i] != '') {
+            arr4.push(that.data.skill[i])            
+          }          
+        }  
+        for(var i=0;i<arr4.length;i++) {
+          ctx.fillText(arr4[i],130,25*(num1+num2+num3)+35+i*11)
+        }   
         ctx.stroke()
 
-        const grd4 = ctx.createCircularGradient(120, 240, 10)
+
+        const grd4 = ctx.createCircularGradient(120, 25*(num1+num2+num3+num4)+10, 10)
         grd4.addColorStop(0, '#748ca6')
         grd4.addColorStop(1, 'white')
         ctx.setFillStyle(grd4)
-        ctx.fillRect(100, 220, 200, 40)
+        ctx.fillRect(100, 25*(num1+num2+num3+num4), 200, 25*(num-(num1+num2+num3+num4))/2)
+        ctx.setFillStyle('black')
+        ctx.setFontSize(12)
+        ctx.fillText('兴趣爱好',130,25*(num1+num2+num3+num4)+13)
+        ctx.setFontSize(8)
+        ctx.fillText(that.data.hobby,130,25*(num1+num2+num3+num4)+25)
         ctx.stroke()
 
-        const grd5 = ctx.createCircularGradient(120, 280, 10)
+        const grd5 = ctx.createCircularGradient(120, 25*(num1+num2+num3+num4)+10+25*(num-(num1+num2+num3+num4))/2, 10)
         grd5.addColorStop(0, '#748ca6')
         grd5.addColorStop(1, 'white')
         ctx.setFillStyle(grd5)
-        ctx.fillRect(100, 260, 200, 40)
+        ctx.fillRect(100, 25*(num1+num2+num3+num4)+25*(num-(num1+num2+num3+num4))/2, 200, 25*(num-(num1+num2+num3+num4))/2)
+        ctx.setFillStyle('black')
+        ctx.setFontSize(12)
+        ctx.fillText('自我评价',130,25*(num1+num2+num3+num4)+13+25*(num-(num1+num2+num3+num4))/2)
+        ctx.setFontSize(8)
+        ctx.fillText(that.data.assess,130,25*(num1+num2+num3+num4)+25*(num-(num1+num2+num3+num4))/2+25)
         ctx.stroke()
 
 
