@@ -21,10 +21,12 @@ Page({
     prize:[],
     school:[],
     skill:[],
-    work:[]
+    work:[],
+    resumeImg:[]
   },
   
   save(){
+    var that = this;
     wx.canvasToTempFilePath({
       x: 0,
       y: 0,
@@ -35,10 +37,43 @@ Page({
       canvasId: 'myCanvas',
       success: function (res) {
         wx.saveImageToPhotosAlbum({
+          filePath: res.tempFilePath,          
+        }),
+        wx.cloud.uploadFile({
           filePath: res.tempFilePath,
+          // cloudPath: res.result.data[0].openid+'.jpg',
+          cloudPath:new Date().getTime()+'.png',
+          success:res=> {
+            var img=[] 
+            for(var i=0;i<that.data.resumeImg.length;i++) {
+              img[i]=that.data.resumeImg[i]
+            }
+            img.push(res.fileID)
+            that.setData({
+              resumeImg:img
+            })
+            console.log(that.data.resumeImg)
+            console.log("上传成功")
+            wx.cloud.callFunction({
+              name: 'updateResumeImg',
+              data: {
+                resumeImg: that.data.resumeImg,
+              },
+              success: res => {   
+                console.log("成功", res)    
+              },
+              fail: err => {
+                console.log("失败", err)
+              }
+            })
+          },
+          fail:err =>{
+            console.log(err)
+          }
         })
       }
     })
+ 
   },
 
   /**
@@ -65,7 +100,8 @@ Page({
           prize:res.result.data[0].prize.split(';'),
           school:res.result.data[0].school.split(';'),
           skill:res.result.data[0].skill.split(';'),
-          work:res.result.data[0].work.split(';')
+          work:res.result.data[0].work.split(';'),
+          resumeImg:res.result.data[0].resumeImg
         })
         const ctx = wx.createCanvasContext('myCanvas');
         ctx.setFillStyle('#b8b4cb')
@@ -177,7 +213,7 @@ Page({
           }          
         } 
         num = num + 4;
-// 一个num代表25
+
         const grd = ctx.createCircularGradient(120, 20, 10)
         grd.addColorStop(0, '#748ca6')
         grd.addColorStop(1, 'white')
@@ -270,19 +306,54 @@ Page({
         ctx.setFontSize(12)
         ctx.fillText('兴趣爱好',130,25*(num1+num2+num3+num4)+13)
         ctx.setFontSize(8)
-        ctx.fillText(that.data.hobby,130,25*(num1+num2+num3+num4)+25)
+        var text1 =that.data.hobby;
+        var chr1 = text1.split("");//这个方法是将一个字符串分割成字符串数组
+        var temp1 = "";
+        var row1 = [];
+        for (var a = 0; a < chr1.length; a++) {
+          if (ctx.measureText(temp1).width < 140) {
+            temp1 += chr1[a];
+          }
+          else {
+            a--; //这里添加了a-- 是为了防止字符丢失，效果图中有对比
+            row1.push(temp1);
+            temp1 = "";
+          }
+        }
+        row1.push(temp1);
+        for (var b = 0; b < row1.length; b++) {
+          ctx.fillText(row1[b], 130, 25*(num1+num2+num3+num4)+25+b*11);
+        }
+
         ctx.stroke()
 
-        const grd5 = ctx.createCircularGradient(120, 25*(num1+num2+num3+num4)+10+25*(num-(num1+num2+num3+num4))/2, 10)
+        const grd5 = ctx.createCircularGradient(120, 25*(num1+num2+num3+num4)+20+25*(num-(num1+num2+num3+num4))/2, 10)
         grd5.addColorStop(0, '#748ca6')
         grd5.addColorStop(1, 'white')
         ctx.setFillStyle(grd5)
         ctx.fillRect(100, 25*(num1+num2+num3+num4)+25*(num-(num1+num2+num3+num4))/2, 200, 25*(num-(num1+num2+num3+num4))/2)
         ctx.setFillStyle('black')
         ctx.setFontSize(12)
-        ctx.fillText('自我评价',130,25*(num1+num2+num3+num4)+13+25*(num-(num1+num2+num3+num4))/2)
+        ctx.fillText('自我评价',130,25*(num1+num2+num3+num4)+23+25*(num-(num1+num2+num3+num4))/2)
         ctx.setFontSize(8)
-        ctx.fillText(that.data.assess,130,25*(num1+num2+num3+num4)+25*(num-(num1+num2+num3+num4))/2+25)
+        var text2 =that.data.assess;
+        var chr2 = text2.split("");//这个方法是将一个字符串分割成字符串数组
+        var temp2 = "";
+        var row2 = [];
+        for (var a = 0; a < chr2.length; a++) {
+          if (ctx.measureText(temp2).width < 140) {
+            temp2 += chr2[a];
+          }
+          else {
+            a--; //这里添加了a-- 是为了防止字符丢失，效果图中有对比
+            row2.push(temp2);
+            temp2 = "";
+          }
+        }
+        row2.push(temp2);
+        for (var b = 0; b < row2.length; b++) {
+          ctx.fillText(row2[b], 130, 25*(num1+num2+num3+num4)+25*(num-(num1+num2+num3+num4))/2+35+b*11);
+        }
         ctx.stroke()
 
 

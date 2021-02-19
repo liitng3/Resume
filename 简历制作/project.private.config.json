@@ -34,6 +34,12 @@
         {
           "name": "pages/modle1/modle1",
           "pathName": "pages/modle1/modle1",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/me/me",
+          "pathName": "pages/me/me",
           "scene": null
         }
       ]

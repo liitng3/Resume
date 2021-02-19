@@ -1,8 +1,6 @@
 {
   "pages": [    
     "pages/home/home",
-    "pages/index/index",
-    "pages/cloud/cloud",
     "pages/we/we",
     "pages/write/write",
     "pages/modle/modle",

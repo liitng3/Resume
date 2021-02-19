@@ -1,2 +1,12 @@
-<!--pages/me/me.wxml-->
-<text>pages/me/me.wxml</text>
+<!-- <view class="container" wx:for="{{resumeImg}}">
+  <image class="" src="{{item}}"></image>
+</view> -->
+<view class='container'>
+    <view class='card_wrap'>
+        <view class='card_item' bindtouchstart='touchstart' bindtouchend="touchend" animation="{{id === 0 ? animationData : ''}}" wx:for='{{resumeImg}}' wx:key="unique" wx:for-index="id" wx:for-item="item">
+            <view class='card-container'>
+              <image class="img" src="{{item}}"></image>
+            </view>
+        </view>
+    </view>
+</view>
