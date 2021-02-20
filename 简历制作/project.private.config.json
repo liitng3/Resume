@@ -40,6 +40,12 @@
         {
           "name": "pages/me/me",
           "pathName": "pages/me/me",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/modle2/modle2",
+          "pathName": "pages/modle2/modle2",
           "scene": null
         }
       ]
