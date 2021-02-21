@@ -1,4 +1,4 @@
-// pages/modle1/modle1.js
+// pages/modle2/modle2.js
 Page({
 
   /**
@@ -165,11 +165,69 @@ Page({
         ctx.stroke()
 
         ctx.beginPath()
+        ctx.moveTo(0, 200)
+        ctx.lineTo(70,200)
+        ctx.lineTo(100,180)
+        ctx.lineTo(0,180)
+        ctx.setFillStyle('#0f4f8d')
+        ctx.setLineWidth(0.5)
+        ctx.fill()
+        ctx.closePath()
+        ctx.stroke()
+        ctx.setFontSize(13)
+        ctx.setFillStyle('white')
+        ctx.fillText('奖项证书',15,195)
+        ctx.stroke() 
+
+        ctx.setFontSize(8)
+        ctx.setFillStyle('black')
+        var len1 = that.data.prize.length;
+        var arr2=[]
+        for(var i=0;i<len1;i++) {
+          if(that.data.prize[i] != 'undefined' && that.data.prize[i] != '') {
+            arr2.push(that.data.prize[i])            
+          }          
+        }  
+        for(var i=0;i<arr2.length;i++) {
+          ctx.fillText('●'+arr2[i],15,220+i*11)
+        }              
+        ctx.stroke()
+
+        ctx.beginPath()
         ctx.moveTo(0, 260)
         ctx.lineTo(300,260)
         ctx.setStrokeStyle('#0f4f8d')
         ctx.setLineWidth(0.5)
         ctx.closePath()
+        ctx.stroke()
+
+        ctx.beginPath()
+        ctx.moveTo(0, 280)
+        ctx.lineTo(70,280)
+        ctx.lineTo(100,260)
+        ctx.lineTo(0,260)
+        ctx.setFillStyle('#0f4f8d')
+        ctx.setLineWidth(0.5)
+        ctx.fill()
+        ctx.closePath()
+        ctx.stroke()
+        ctx.setFontSize(13)
+        ctx.setFillStyle('white')
+        ctx.fillText('职业技能',15,275)
+        ctx.stroke() 
+
+        ctx.setFontSize(8)
+        ctx.setFillStyle('black')
+        var len2 = that.data.skill.length;
+        var arr3=[]
+        for(var i=0;i<len2;i++) {
+          if(that.data.skill[i] != 'undefined' && that.data.skill[i] != '') {
+            arr3.push(that.data.skill[i])            
+          }          
+        }  
+        for(var i=0;i<arr3.length;i++) {
+          ctx.fillText('●'+arr3[i],15,300+i*11)
+        }              
         ctx.stroke()
 
         ctx.beginPath()
@@ -179,7 +237,47 @@ Page({
         ctx.setLineWidth(0.5)
         ctx.closePath()
         ctx.stroke()
-        
+
+        ctx.beginPath()
+        ctx.moveTo(0, 360)
+        ctx.lineTo(70,360)
+        ctx.lineTo(100,340)
+        ctx.lineTo(0,340)
+        ctx.setFillStyle('#0f4f8d')
+        ctx.setLineWidth(0.5)
+        ctx.fill()
+        ctx.closePath()
+        ctx.stroke()
+        ctx.setFontSize(13)
+        ctx.setFillStyle('white')
+        ctx.fillText('自我评价',15,355)
+        ctx.stroke() 
+
+        ctx.setFillStyle('black')
+        ctx.setFontSize(8)
+        var text2 =that.data.assess;
+        var chr2 = text2.split("");//这个方法是将一个字符串分割成字符串数组
+        var temp2 = "";
+        var row2 = [];
+        for (var a = 0; a < chr2.length; a++) {
+          if (ctx.measureText(temp2).width < 265) {
+            temp2 += chr2[a];
+          }
+          else {
+            a--; //这里添加了a-- 是为了防止字符丢失，效果图中有对比
+            row2.push(temp2);
+            temp2 = "";
+          }
+        }
+        row2.push(temp2);
+        for (var b = 0; b < row2.length; b++) {
+          ctx.fillText(row2[b], 15, 375+b*11);
+        }
+        ctx.stroke()        
+       
+        ctx.setFillStyle('#ddd')
+        ctx.fillRect(234, 5, 50, 66.875)
+
         wx.getImageInfo({
           src: that.data.imgUrl,
           success(res){

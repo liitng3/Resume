@@ -301,7 +301,7 @@ Page({
         grd4.addColorStop(0, '#748ca6')
         grd4.addColorStop(1, 'white')
         ctx.setFillStyle(grd4)
-        ctx.fillRect(100, 25*(num1+num2+num3+num4), 200, 25*(num-(num1+num2+num3+num4))/2)
+        ctx.fillRect(100, 25*(num1+num2+num3+num4), 200, 400)
         ctx.setFillStyle('black')
         ctx.setFontSize(12)
         ctx.fillText('兴趣爱好',130,25*(num1+num2+num3+num4)+13)
@@ -327,34 +327,34 @@ Page({
 
         ctx.stroke()
 
-        const grd5 = ctx.createCircularGradient(120, 25*(num1+num2+num3+num4)+20+25*(num-(num1+num2+num3+num4))/2, 10)
-        grd5.addColorStop(0, '#748ca6')
-        grd5.addColorStop(1, 'white')
-        ctx.setFillStyle(grd5)
-        ctx.fillRect(100, 25*(num1+num2+num3+num4)+25*(num-(num1+num2+num3+num4))/2, 200, 25*(num-(num1+num2+num3+num4))/2)
-        ctx.setFillStyle('black')
-        ctx.setFontSize(12)
-        ctx.fillText('自我评价',130,25*(num1+num2+num3+num4)+23+25*(num-(num1+num2+num3+num4))/2)
-        ctx.setFontSize(8)
-        var text2 =that.data.assess;
-        var chr2 = text2.split("");//这个方法是将一个字符串分割成字符串数组
-        var temp2 = "";
-        var row2 = [];
-        for (var a = 0; a < chr2.length; a++) {
-          if (ctx.measureText(temp2).width < 140) {
-            temp2 += chr2[a];
-          }
-          else {
-            a--; //这里添加了a-- 是为了防止字符丢失，效果图中有对比
-            row2.push(temp2);
-            temp2 = "";
-          }
-        }
-        row2.push(temp2);
-        for (var b = 0; b < row2.length; b++) {
-          ctx.fillText(row2[b], 130, 25*(num1+num2+num3+num4)+25*(num-(num1+num2+num3+num4))/2+35+b*11);
-        }
-        ctx.stroke()
+        // const grd5 = ctx.createCircularGradient(120, 25*(num1+num2+num3+num4)+20+25*(num-(num1+num2+num3+num4))/2, 10)
+        // grd5.addColorStop(0, '#748ca6')
+        // grd5.addColorStop(1, 'white')
+        // ctx.setFillStyle('white')
+        // ctx.fillRect(100, 25*(num1+num2+num3+num4)+25*(num-(num1+num2+num3+num4))/2, 200, 25*(num-(num1+num2+num3+num4))/2)
+        // ctx.setFillStyle('black')
+        // ctx.setFontSize(12)
+        // ctx.fillText('自我评价',130,25*(num1+num2+num3+num4)+23+25*(num-(num1+num2+num3+num4))/2)
+        // ctx.setFontSize(8)
+        // var text2 =that.data.assess;
+        // var chr2 = text2.split("");//这个方法是将一个字符串分割成字符串数组
+        // var temp2 = "";
+        // var row2 = [];
+        // for (var a = 0; a < chr2.length; a++) {
+        //   if (ctx.measureText(temp2).width < 140) {
+        //     temp2 += chr2[a];
+        //   }
+        //   else {
+        //     a--; //这里添加了a-- 是为了防止字符丢失，效果图中有对比
+        //     row2.push(temp2);
+        //     temp2 = "";
+        //   }
+        // }
+        // row2.push(temp2);
+        // for (var b = 0; b < row2.length; b++) {
+        //   ctx.fillText(row2[b], 130, 25*(num1+num2+num3+num4)+25*(num-(num1+num2+num3+num4))/2+35+b*11);
+        // }
+        // ctx.stroke()
 
 
         wx.getImageInfo({

@@ -46,6 +46,36 @@
         {
           "name": "pages/modle2/modle2",
           "pathName": "pages/modle2/modle2",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/modle3/modle3",
+          "pathName": "pages/modle3/modle3",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/modle4/modle4",
+          "pathName": "pages/modle4/modle4",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/modle5/modle5",
+          "pathName": "pages/modle5/modle5",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/modle6/modle6",
+          "pathName": "pages/modle6/modle6",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/modle1/modle1",
+          "pathName": "pages/modle1/modle1",
           "scene": null
         }
       ]

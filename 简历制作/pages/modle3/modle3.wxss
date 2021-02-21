@@ -1,1 +1,8 @@
-/* pages/modle3/modle3.wxss */
+
+.can{
+  width: 300px;
+  height: 400px;
+  margin: 20px auto;
+  border: 1px gray solid;
+}
+  
