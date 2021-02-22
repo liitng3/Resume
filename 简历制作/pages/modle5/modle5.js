@@ -216,7 +216,7 @@ Page({
         num = num + 4;
 
         const grd = ctx.createCircularGradient(120, 20, 10)
-        grd.addColorStop(0, '#dab595')
+        grd.addColorStop(0, '#cbb9c6')
         grd.addColorStop(1, 'white')
         ctx.setFillStyle(grd)
 
@@ -238,7 +238,7 @@ Page({
         ctx.stroke()
        
         const grd1 = ctx.createCircularGradient(120, 25*num1+10, 10)
-        grd1.addColorStop(0, '#dab595')
+        grd1.addColorStop(0, '#cbb9c6')
         grd1.addColorStop(1, 'white')
         ctx.setFillStyle(grd1)
         ctx.fillRect(100, 25*num1, 200, 25*num2)
@@ -258,7 +258,7 @@ Page({
         ctx.stroke()
 
         const grd2 = ctx.createCircularGradient(120, 25*(num1+num2)+20, 10)
-        grd2.addColorStop(0, '#dab595')
+        grd2.addColorStop(0, '#cbb9c6')
         grd2.addColorStop(1, 'white')
         ctx.setFillStyle(grd2)
         ctx.fillRect(100, 25*(num1+num2), 200, 25*num3)
@@ -278,7 +278,7 @@ Page({
         ctx.stroke()
 
         const grd3 = ctx.createCircularGradient(120, 25*(num1+num2+num3)+20, 10)
-        grd3.addColorStop(0, '#dab595')
+        grd3.addColorStop(0, '#cbb9c6')
         grd3.addColorStop(1, 'white')
         ctx.setFillStyle(grd3)
         ctx.fillRect(100, 25*(num1+num2+num3), 200, 25*num3)
@@ -299,7 +299,7 @@ Page({
 
 
         const grd4 = ctx.createCircularGradient(120, 25*(num1+num2+num3+num4)+10, 10)
-        grd4.addColorStop(0, '#dab595')
+        grd4.addColorStop(0, '#cbb9c6')
         grd4.addColorStop(1, 'white')
         ctx.setFillStyle(grd4)
         ctx.fillRect(100, 25*(num1+num2+num3+num4), 200, 400)

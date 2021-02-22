@@ -1,20 +1,20 @@
 <view class="container">
   <view bindtap="jump1">
-    1
+    <image class='img' src='cloud://resume-dbcdg.7265-resume-dbcdg-1304912994/resume/1.jpg'></image>
   </view>
   <view bindtap="jump2">
-    2
+    <image class='img' src='cloud://resume-dbcdg.7265-resume-dbcdg-1304912994/resume/2.jpg'></image>
   </view>
   <view bindtap="jump3">
-    3
+    <image class='img' src='cloud://resume-dbcdg.7265-resume-dbcdg-1304912994/resume/4.jpg'></image>
   </view>
   <view bindtap="jump4">
-    4
+    <image class='img' src='cloud://resume-dbcdg.7265-resume-dbcdg-1304912994/resume/3.jpg'></image>
   </view>
   <view bindtap="jump5">
-    5
+    <image class='img' src='cloud://resume-dbcdg.7265-resume-dbcdg-1304912994/resume/5.jpg'></image>
   </view>
   <view bindtap="jump6">
-    6
+    <image class='img' src='cloud://resume-dbcdg.7265-resume-dbcdg-1304912994/resume/6.jpg'></image>
   </view>
 </view>

@@ -1,8 +1,8 @@
 /* pages/modle/modle.wxss */
 .container view {
-  width: 40%;
-  height: 170px;
-  background: red;
+  border:1px gray solid;
+  width: 150px;
+  height: 200px;
   margin-bottom: 20px;
 }
 
@@ -12,4 +12,8 @@
   justify-content: space-around;
   flex-direction: row;
   flex-wrap: wrap;
+}
+.img{
+  width: 150px;
+  height: 200px;
 }

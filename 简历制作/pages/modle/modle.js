@@ -19,12 +19,12 @@ Page({
   },
   jump3(){
     wx.navigateTo({
-      url: '/pages/modle3/modle3',
+      url: '/pages/modle4/modle4',
     })
   },
   jump4(){
     wx.navigateTo({
-      url: '/pages/modle4/modle4',
+      url: '/pages/modle3/modle3',
     })
   },
   jump5(){

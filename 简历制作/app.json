@@ -30,17 +30,19 @@
   "style": "v2",
   "sitemapLocation": "sitemap.json",
   "tabBar": {
+    "color":"#bbb",
+    "selectedColor":"#5a8fed",
     "list": [
       {
         "text": "首页",
-        "iconPath": "images/home.png",
-        "selectedIconPath": "images/home.png",
+        "iconPath": "images/home2.png",
+        "selectedIconPath": "images/home1.png",
         "pagePath": "pages/home/home"
       },
       {
         "text": "我的",
-        "iconPath": "images/index.png",
-        "selectedIconPath": "images/index.png",
+        "iconPath": "images/me2.png",
+        "selectedIconPath": "images/me1.png",
         "pagePath": "pages/we/we"
       }
     ]
