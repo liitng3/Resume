@@ -20,12 +20,6 @@
           "scene": null
         },
         {
-          "name": "pages/write/write",
-          "pathName": "pages/school/school",
-          "query": "",
-          "scene": null
-        },
-        {
           "name": "pages/we/we",
           "pathName": "pages/we/we",
           "query": "",
@@ -82,6 +76,7 @@
         {
           "name": "pages/modle/modle",
           "pathName": "pages/modle/modle",
+          "query": "",
           "scene": null
         }
       ]

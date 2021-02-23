@@ -1,80 +1,83 @@
 <view>
-  <view class="edit-list">
-
-    <button class="list-name list-first" bindtap="chooseImg">头像</button>
+  <view class="edit-list">    
     <view class="edit-righr-bar">
-    <image class="head-portrait" src="{{imgUrl}}" ></image>
+      <image class="head-portrait" src="{{imgUrl}}" ></image>
     </view>
+    <button class="list-name list-first" bindtap="chooseImg">证件照</button>
   </view>
 
   <view>
     <form bindsubmit="postForm">
       <view class="user-data">
         <view class="one">
-          姓　　名
-          <input type="text" bindinput="getInput1" name="input" value="{{name}}"></input>
+          <label class="label" for="input1">姓　　名</label>
+          <input id="input1" type="text" bindinput="getInput1" name="input" value="{{name}}"></input>
         </view>
-        <view class="one">
-          年　　龄
-          <input type="text" bindinput="getInput2" name="input" value="{{age}}"></input>
+        <view class="one">          
+          <label class="label" for="input2">年　　龄</label>
+          <input id="input2" type="text" bindinput="getInput2" name="input" value="{{age}}"></input>
         </view>
         <view class="one">
           <radio-group class="radio-group" bindchange="getInput3">
             性　　别
             <label class="radio">
-              <radio color="red" value="男" checked="{{sex=='男'?true:false}}" />男
-              <radio color="red" value="女" checked="{{sex=='男'?false:true}}"/>女
+              <radio color="teal" value="男" checked="{{sex=='男'?true:false}}" />男
+              <radio color="teal" value="女" checked="{{sex=='男'?false:true}}"/>女
             </label>
           </radio-group>
         </view>
-        <view class="one">
-          邮　　箱
-          <input type="text" bindinput="getInput4" name="input" value="{{email}}"></input>
+        <view class="one">          
+          <label class="label" for="input3">邮　　箱</label>
+          <input id="input3" type="text" bindinput="getInput4" name="input" value="{{email}}"></input>
         </view>
-        <view class="one">
-          民　　族
-          <input type="text" bindinput="getInput5" name="input" value="{{nation}}"></input>
+        <view class="one">          
+          <label class="label" for="input4">民　　族</label>
+          <input id="input4" type="text" bindinput="getInput5" name="input" value="{{nation}}"></input>
         </view>
         <view class="one">
           <radio-group class="radio-group" bindchange="getInput6">
             婚姻状况
             <label class="radio">
-              <radio color="red" value="已婚" checked="{{marry=='已婚'?true:false}}" />已婚
-              <radio color="red" value="未婚" checked="{{marry=='已婚'?false:true}}"/>未婚
+              <radio color="teal" value="已婚" checked="{{marry=='已婚'?true:false}}" />已婚
+              <radio color="teal" value="未婚" checked="{{marry=='已婚'?false:true}}"/>未婚
             </label>
           </radio-group>
         </view>
-        <view class="one">
-          手机号码
-          <input type="text" bindinput="getInput7" name="input" value="{{tel}}"></input>
+        <view class="one">          
+          <label class="label" for="input5">手机号码</label>
+          <input id="input5" type="text" bindinput="getInput7" name="input" value="{{tel}}"></input>
         </view>
-        <view class="one">
-          政治面貌
-          <input type="text" bindinput="getInput8" name="input" value="{{face}}"></input>
+        <view class="one">          
+          <label class="label" for="input6">政治面貌</label>
+          <input id="input6" type="text" bindinput="getInput8" name="input" value="{{face}}"></input>
         </view>
       </view>
       <view class="user-school" bindtap="jump1">
-        在校经历 
+        　在校经历 
+        <text>　　　　　　　　　　　　　　＋</text>
       </view>
       <view class="user-school" bindtap="jump2">
-        工作经历 
+        　工作经历 
+        <text>　　　　　　　　　　　　　　＋</text>
       </view>
       <view class="user-school" bindtap="jump3">
-        职业技能
+        　职业技能
+        <text>　　　　　　　　　　　　　　＋</text>
       </view>
       <view class="user-school" bindtap="jump4">
-        奖项证书 
+        　奖项证书 
+        <text>　　　　　　　　　　　　　　＋</text>
       </view>
       <view class="user-school">
-        求职意向 
+        　求职意向 
         <textarea  name="" id="" cols="30" rows="10" bindinput="getInput9" value="{{intend}}"></textarea>
       </view>
       <view class="user-school">
-        兴趣爱好
+        　兴趣爱好
         <textarea  name="" id="" cols="30" rows="10" bindinput="getInput10" value="{{hobby}}"></textarea>
       </view>
       <view class="user-school">
-        自我评价
+        　自我评价
         <textarea  name="" id="" cols="30" rows="10" bindinput="getInput11" value="{{assess}}"></textarea>
       </view>
       <button form-type="submit">保存
