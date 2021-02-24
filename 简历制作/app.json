@@ -19,7 +19,10 @@
     "pages/modle3/modle3",
     "pages/modle4/modle4",
     "pages/modle5/modle5",
-    "pages/modle6/modle6"
+    "pages/modle6/modle6",
+    "pages/intend/intend",
+    "pages/hobby/hobby",
+    "pages/self/self"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -17,6 +17,16 @@
           <label class="label" for="input2">年　　龄</label>
           <input id="input2" type="text" bindinput="getInput2" name="input" value="{{age}}"></input>
         </view>
+
+        <view class="one">          
+          <label class="label" for="input3">邮　　箱</label>
+          <input id="input3" type="text" bindinput="getInput4" name="input" value="{{email}}"></input>
+        </view>
+        <view class="one">          
+          <label class="label" for="input4">民　　族</label>
+          <input id="input4" type="text" bindinput="getInput5" name="input" value="{{nation}}"></input>
+        </view>
+        <view>　</view>
         <view class="one">
           <radio-group class="radio-group" bindchange="getInput3">
             性　　别
@@ -26,14 +36,7 @@
             </label>
           </radio-group>
         </view>
-        <view class="one">          
-          <label class="label" for="input3">邮　　箱</label>
-          <input id="input3" type="text" bindinput="getInput4" name="input" value="{{email}}"></input>
-        </view>
-        <view class="one">          
-          <label class="label" for="input4">民　　族</label>
-          <input id="input4" type="text" bindinput="getInput5" name="input" value="{{nation}}"></input>
-        </view>
+        <view>　</view>
         <view class="one">
           <radio-group class="radio-group" bindchange="getInput6">
             婚姻状况
@@ -54,31 +57,31 @@
       </view>
       <view class="user-school" bindtap="jump1">
         　在校经历 
-        <text>　　　　　　　　　　　　　　＋</text>
+        <text class="ps">　＋</text>
       </view>
       <view class="user-school" bindtap="jump2">
         　工作经历 
-        <text>　　　　　　　　　　　　　　＋</text>
+        <text class="ps">　＋</text>
       </view>
       <view class="user-school" bindtap="jump3">
         　职业技能
-        <text>　　　　　　　　　　　　　　＋</text>
+        <text class="ps">　＋</text>
       </view>
       <view class="user-school" bindtap="jump4">
         　奖项证书 
-        <text>　　　　　　　　　　　　　　＋</text>
+        <text class="ps">　＋</text>
       </view>
-      <view class="user-school">
+      <view class="user-school" bindtap="jump5">
         　求职意向 
-        <textarea  name="" id="" cols="30" rows="10" bindinput="getInput9" value="{{intend}}"></textarea>
+        <text class="ps">编辑</text>
       </view>
-      <view class="user-school">
+      <view class="user-school" bindtap="jump6">
         　兴趣爱好
-        <textarea  name="" id="" cols="30" rows="10" bindinput="getInput10" value="{{hobby}}"></textarea>
+        <text class="ps">编辑</text>
       </view>
-      <view class="user-school">
+      <view class="user-school" bindtap="jump7">
         　自我评价
-        <textarea  name="" id="" cols="30" rows="10" bindinput="getInput11" value="{{assess}}"></textarea>
+        <text class="ps">编辑</text>
       </view>
       <button form-type="submit">保存
       </button>

@@ -75,3 +75,7 @@ textarea{
   width: 64px;
   height: 86.5px;
 }
+.user-school .ps{
+  color: #aaa;
+  margin-left: 65%;
+}

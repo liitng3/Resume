@@ -1,0 +1,5 @@
+/* pages/hobby/hobby.wxss */
+textarea{
+  width: 100%;
+  border: 1px pink solid;
+}

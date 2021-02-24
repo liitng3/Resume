@@ -77,6 +77,21 @@ Page({
       url: '/pages/prize/prize',
     })
   },
+  jump5(){
+    wx.navigateTo({
+      url: '/pages/intend/intend',
+    })
+  },
+  jump6(){
+    wx.navigateTo({
+      url: '/pages/hobby/hobby',
+    })
+  },
+  jump7(){
+    wx.navigateTo({
+      url: '/pages/self/self',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -197,21 +212,6 @@ Page({
   getInput8(e) {
     this.setData({
       face: e.detail.value
-    })
-  },
-  getInput9(e) {
-    this.setData({
-      intend: e.detail.value
-    })
-  },
-  getInput10(e) {
-    this.setData({
-      hobby: e.detail.value
-    })
-  },
-  getInput11(e) {
-    this.setData({
-      assess: e.detail.value
     })
   },
 
