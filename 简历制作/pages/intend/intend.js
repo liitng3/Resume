@@ -7,6 +7,19 @@ Page({
   data: {
     intend:''
   },
+  commit(){
+    var that = this
+    wx.cloud.callFunction({
+      name: 'updateIntend',
+      data: {
+        intend: that.data.intend
+      }
+    }).then(res => {
+      console.log("成功", res)
+    }).catch(res => {
+      console.log("失败", res)
+    })
+  },
   getInput9(e) {
     this.setData({
       intend: e.detail.value

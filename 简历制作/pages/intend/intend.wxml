@@ -1,1 +1,2 @@
 <textarea  name="" id="" cols="30" rows="10" bindinput="getInput9" value="{{intend}}"></textarea>
+<button bindtap="commit">保存</button>

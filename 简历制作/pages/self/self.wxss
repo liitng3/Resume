@@ -1,5 +1,7 @@
 /* pages/self/self.wxss */
 textarea{
-  width: 100%;
+  width: 90%;
   border: 1px pink solid;
+  margin: 5%;
+  padding: 5px;
 }

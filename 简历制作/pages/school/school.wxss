@@ -1,43 +1,29 @@
 /* pages/school/school.wxss */
-.box{
-  width: 100%;
-}
-.top{
-  width: 90%;
-  height: auto;
-  background:pink ;
-  margin: 0 auto;
-  text-align: center;
-  align-items: center;
-  justify-content: center; 
-}
-.write{
-  width: 80%;
+.add-input{
+  margin: 15px;
+  width: 60px;
+  height: 25px;
+  line-height: 25px;
+  border:1px red solid;
   display: inline-block;
-  border:2px white solid;
-
+  text-align: center;
+  border-radius: 8px;
 }
 .btn{
-
+  border-radius: 8px;
   text-align: center;
-  width: 10%;
+  width: 60px;
+  height: 25px;
+  line-height: 25px;
   display: inline-block;
-  border:2px white solid;
-  margin-right:0px ;
-
-
+  border:1px red solid;
+  margin-left:20px;
 }
-.cen{
-  width: 90%;
-  height: 100px;
-  border:1px black solid;
-  margin:0 auto;
-  margin-top: 30px;
-  word-break: break-all;
+.tip{
+  position: absolute;
+  bottom: 10%;
+  left: 76px;
 }
-.bottom{
-  width: 80%;
-  text-align: center;
-  margin:0 auto;
-  margin-top: 30px;
+input{
+  margin:8px 15px;
 }

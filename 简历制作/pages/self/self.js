@@ -7,7 +7,20 @@ Page({
   data: {
     assess:''
   },
-  getInput10(e) {
+  commit(){
+    var that = this
+    wx.cloud.callFunction({
+      name: 'updateAssess',
+      data: {
+        assess: that.data.assess
+      }
+    }).then(res => {
+      console.log("成功", res)
+    }).catch(res => {
+      console.log("失败", res)
+    })
+  },
+  getInput11(e) {
     this.setData({
       assess: e.detail.value
     })

@@ -7,6 +7,19 @@ Page({
   data: {
     hobby:''
   },
+  commit(){
+    var that = this
+    wx.cloud.callFunction({
+      name: 'updateHobby',
+      data: {
+        hobby: that.data.hobby
+      }
+    }).then(res => {
+      console.log("成功", res)
+    }).catch(res => {
+      console.log("失败", res)
+    })
+  },
   getInput10(e) {
     this.setData({
       hobby: e.detail.value

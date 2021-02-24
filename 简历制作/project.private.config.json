@@ -78,6 +78,30 @@
           "pathName": "pages/modle/modle",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/school/school",
+          "pathName": "pages/school/school",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/work/work",
+          "pathName": "pages/work/work",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/skill/skill",
+          "pathName": "pages/skill/skill",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/intend/intend",
+          "pathName": "pages/intend/intend",
+          "query": "",
+          "scene": null
         }
       ]
     }

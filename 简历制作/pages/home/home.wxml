@@ -1,19 +1,8 @@
 <!-- index.wxml -->
 <view class="content">
-  <view class="container subject1">
-    <view bindtap="tapClick">
-      <text>填写信息</text>
+  <image src='/images/bg.JPG'></image>
+    <view class="subject1" bindtap="tapClick">
     </view>
-    <!-- <navigator url="/pages/write/write" open-type="navigate">
-      <text>填写信息</text>
-    </navigator> -->
-  </view>
-  <view class="container subject2">
-    <view bindtap="tapClick1">
-      <text>选择模板</text>
+    <view class="subject2" bindtap="tapClick1">
     </view>
-    <!-- <navigator url="/pages/modle/modle" open-type="navigate">
-      <text>选择模板</text>
-    </navigator> -->
-  </view>
 </view>

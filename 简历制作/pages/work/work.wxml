@@ -1,10 +1,10 @@
-<view class="add-input flex-hc" bindtap="addInput">
-  +
+<view>  
+  <view class="add-input flex-hc" bindtap="addInput">添加+</view>
+  <view class="btn" bindtap="add" type="button" value="+">保存</view>
+  <view class="input-wrap">
+    <block wx:for="{{credentialList}}" wx:for-key="index" wx:key="index">
+      <input type="text" class="input flex1" placeholder="在校经历{{index+1}}" value="{{item.credentialName}}" bindinput="credentialInput"data-index="{{index}}"></input>
+    </block>
+  </view>  
+  <view class="tip">格式为：2020-2021xxxxxxxxx</view>
 </view>
-<view class="input-wrap">
-	<block wx:for="{{credentialList}}" wx:for-key="index" wx:key="index">
-		<input type="text" class="input flex1" placeholder="选项{{index+1}}" value="{{item.credentialName}}" bindinput="credentialInput"data-index="{{index}}"></input>
-  </block>
-</view>
-<view class="btn" bindtap="add" type="button" value="+">保存</view>
-<view>格式为：2020-2021xxxxxxxxx</view>

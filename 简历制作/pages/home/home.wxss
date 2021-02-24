@@ -1,1 +1,29 @@
 /* pages/home/home.wxss */
+.content{
+  width: 100%;
+  height: auto;
+  /* position: relative; */
+}
+image{
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  z-index: -999;
+}
+.subject1{
+  position: absolute;
+  width: 65%;
+  height: 140px;
+  top: 50px;
+  left: 50px;
+}
+.subject2{
+  position: absolute;
+  width: 65%;
+  height: 140px;
+  top: 249px;
+  left: 50px;
+}
