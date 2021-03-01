@@ -1,4 +1,5 @@
-<view>
+<view class="content">
+  <image class='img' src='cloud://resume-dbcdg.7265-resume-dbcdg-1304912994/bgImg/write.jpg'></image>
   <view class="edit-list">    
     <view class="edit-righr-bar">
       <image class="head-portrait" src="{{imgUrl}}" ></image>

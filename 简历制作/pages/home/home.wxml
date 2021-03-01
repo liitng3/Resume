@@ -1,6 +1,6 @@
 <!-- index.wxml -->
 <view class="content">
-  <image src='/images/bg.JPG'></image>
+  <image src='cloud://resume-dbcdg.7265-resume-dbcdg-1304912994/bgImg/home.JPG'></image>
     <view class="subject1" bindtap="tapClick">
     </view>
     <view class="subject2" bindtap="tapClick1">

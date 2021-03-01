@@ -1,4 +1,6 @@
 <view class='container'>
+	<!-- <image class='img'  hidden='{{!hiddenButton}}' src='cloud://resume-dbcdg.7265-resume-dbcdg-1304912994/bgImg/we.jpg'></image> -->
+	<!-- <image class='img'  hidden='{{hiddenButton}}' src='cloud://resume-dbcdg.7265-resume-dbcdg-1304912994/bgImg/write.jpg'></image> -->
 	  <open-data class="avs" hidden='{{!hiddenButton}}' type="userAvatarUrl"></open-data>
 	  <view class='username'>
 	    <open-data type="userNickName" hidden='{{!hiddenButton}}'></open-data>

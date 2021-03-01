@@ -4,7 +4,7 @@
   width: 60px;
   height: 25px;
   line-height: 25px;
-  border:1px red solid;
+  border:1px pink solid;
   display: inline-block;
   text-align: center;
   border-radius: 8px;
@@ -16,7 +16,7 @@
   height: 25px;
   line-height: 25px;
   display: inline-block;
-  border:1px red solid;
+  border:1px pink solid;
   margin-left:20px;
 }
 .tip{

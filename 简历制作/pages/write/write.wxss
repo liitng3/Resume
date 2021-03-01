@@ -1,4 +1,27 @@
 /* pages/write/write.wxss */
+.content{
+  width: 100%;
+  height: 100%;
+  /* position: relative; */
+}
+.img{
+  position: absolute;
+  height: 730px;
+  left: 0;
+  top: -20px;
+  display: block;
+  width: 100%;
+  z-index: -999;
+}
+.edit-list{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+/* .list-name{
+  width: 30px;
+  height: 25px;
+  font-size: 12px;
+} */
 .user-data{
   padding-bottom: 10px;
   width: 80%;
