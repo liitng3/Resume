@@ -1,17 +1,20 @@
 <view class='container'>
-	<!-- <image class='img'  hidden='{{!hiddenButton}}' src='cloud://resume-dbcdg.7265-resume-dbcdg-1304912994/bgImg/we.jpg'></image> -->
-	<!-- <image class='img'  hidden='{{hiddenButton}}' src='cloud://resume-dbcdg.7265-resume-dbcdg-1304912994/bgImg/write.jpg'></image> -->
-	  <open-data class="avs" hidden='{{!hiddenButton}}' type="userAvatarUrl"></open-data>
-	  <view class='username'>
-	    <open-data type="userNickName" hidden='{{!hiddenButton}}'></open-data>
+  <!-- <image class='img'  hidden='{{!hiddenButton}}' src='cloud://resume-dbcdg.7265-resume-dbcdg-1304912994/bgImg/we.jpg'></image> -->
+  <!-- <image class='img'  hidden='{{hiddenButton}}' src='cloud://resume-dbcdg.7265-resume-dbcdg-1304912994/bgImg/write.jpg'></image> -->
+    <open-data class="avs" hidden='{{!hiddenButton}}' type="userAvatarUrl"></open-data>
+    <view class='username'>
+      <open-data type="userNickName" hidden='{{!hiddenButton}}'></open-data>
     </view>
     <view class='me' hidden='{{!hiddenButton}}' bindtap="jump1">
-	    <text>我的简历</text>
+      <text>我的简历</text>
     </view>
     <view class='question' hidden='{{!hiddenButton}}' bindtap="jump2">
-	    <text>常见问题</text>
-	  </view>
-	  <button hidden='{{hiddenButton}}' class='moto-container' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">
-	    <text class='moto'> 登录</text>
-	  </button>
+      <text>常见问题</text>
+    </view>
+    <view class='member' hidden='{{!hiddenButton}}' bindtap="jump3">
+      <text>管理员</text>
+    </view>
+    <button hidden='{{hiddenButton}}' class='moto-container' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">
+      <text class='moto'> 登录</text>
+    </button>
 </view>  

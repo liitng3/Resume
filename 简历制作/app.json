@@ -22,7 +22,8 @@
     "pages/modle6/modle6",
     "pages/intend/intend",
     "pages/hobby/hobby",
-    "pages/self/self"
+    "pages/self/self",
+    "pages/member/member"
   ],
   "window": {
     "backgroundTextStyle": "light",

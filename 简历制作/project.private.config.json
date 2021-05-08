@@ -102,6 +102,11 @@
           "pathName": "pages/intend/intend",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/member/member",
+          "pathName": "pages/member/member",
+          "scene": null
         }
       ]
     }

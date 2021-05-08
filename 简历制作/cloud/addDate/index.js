@@ -24,7 +24,8 @@ exports.main = async (event, context) => {
       imgUrl:event.imgUrl,
       assess: event.assess,
       hobby: event.hobby,
-      intend: event.intend
+      intend: event.intend,
+      isMember:false
     }
   })
   

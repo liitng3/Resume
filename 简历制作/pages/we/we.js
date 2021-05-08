@@ -155,7 +155,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    hiddenButton: true
+    hiddenButton: true,
+    isMember: false
   },
 
   /**
@@ -225,6 +226,19 @@ Page({
     wx.navigateTo({
       url: '/pages/question/question',
     })
+  },
+  jump3(){
+    if(this.data.isMember == true) {
+      wx.navigateTo({
+        url: '/pages/member/member',
+      })
+    } else {
+      wx.showToast({  
+        title: '不是管理员身份',  
+        icon: "none",  
+        duration: 2000  
+    })  
+    }
   },
   /**
    * 注册用户信息
@@ -334,6 +348,16 @@ Page({
           icon: 'none'
         })
         console.log("wx.getSetting调用失败")
+      }
+    })
+    wx.cloud.callFunction({
+      name: 'getData',
+      success: res => {
+        _this.setData({
+          isMember: res.result.data[0].isMember
+        })
+      },
+      fail: err => {
       }
     })
   }
